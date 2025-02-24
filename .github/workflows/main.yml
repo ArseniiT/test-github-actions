@@ -9,6 +9,7 @@ jobs:
         run: echo "Ce job tourne sur Ubuntu"
 
   job2:
+    needs: build
     runs-on: windows-latest
     steps:
       - name: Exécution sur Windows
