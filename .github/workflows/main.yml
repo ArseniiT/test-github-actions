@@ -12,3 +12,5 @@ jobs:
     steps:
       - name: Получение кода
         uses: actions/checkout@v3
+      - name: Вывод списка файлов
+        run: ls -la
