@@ -15,5 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Vérifier la variable d'environnement
-        run: echo "salut" ${{secrets.DB_NAME}}
+      - name: Записать секрет в файл
+        run: echo "${{ secrets.DB_NAME }}" > temp_file.txt
+      - name: Прочитать файл
+        run: cat temp_file.txt
